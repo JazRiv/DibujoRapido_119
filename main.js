@@ -36,7 +36,7 @@ function gotResult(error, resultado){
         document.getElementById("dibujo").innerHTML = "Tu dibujaste:" + drawn_sketch;
         confianza = respuesta[0].confidence;
         confianza = Math.round(confianza * 100);
-        document.getElementById("conf").innerHTML = confianza + "%";
+        document.getElementById("conf").innerHTML = "Estoy un" + confianza + "%" + "seguro";
     }
     check_sketch();
 }
