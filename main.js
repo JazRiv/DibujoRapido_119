@@ -34,6 +34,9 @@ function gotResult(error, resultado){
         console.log(resultado);
         drawn_sketch = resultado[0].label;
         document.getElementById("dibujo").innerHTML = "Tu dibujaste:" + drawn_sketch;
+        confianza = respuesta[0].confidence;
+        confianza = Math.round(confianza * 100);
+        document.getElementById("conf").innerHTML = confianza + "%";
     }
     check_sketch();
 }
